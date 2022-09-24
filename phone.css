@@ -1,0 +1,118 @@
+:root {
+  /* COLOR VARIABLES */
+  --background-color: #F0EABE;
+  --foreground-color: #000040;
+  --primary-color: #6545FF;
+  --secondary-color: #3B9AE1;
+  --tertiary-color: #21E1E1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  padding-top: 10vh;
+  background-color: var(--background-color);
+  color: var(--foreground-color);
+  font-family: Helvetica, sans;
+  width: 100vw;
+}
+
+nav {
+  background-color: var(--secondary-color);
+  position: fixed;
+  top: 0;
+  height: 10vh;
+  width: 100vw;
+  padding: 0.5vh;
+  z-index: 9999;
+}
+
+#nav-logo { width: 9vh; }
+
+.nav-link { display: none; }
+
+.menu-btn {
+  margin: 1.5vh 3vw;
+  float: right;
+  width: 8vh;
+  height: 6vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 25%;
+  padding: 2vw;
+  border-radius: 2vw;
+  border: solid var(--foreground-color) 4px;
+}
+
+.menu-btn:hover { background-color: var(--primary-color); }
+
+.menu-btn-bar {
+  border-radius: 1vw;
+  background-color: var(--foreground-color);
+}
+
+.nav-menu { text-align: center; }
+
+#nav-menu-logo {
+  text-decoration: none;
+  width: 70vw;
+  margin: 10vw;
+  margin-top: 0;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 35%;
+}
+#nav-menu-logo:hover { background-color: var(--tertiary-color); }
+
+.nav-menu-link {
+  text-decoration: none;
+  color: var(--foreground-color);
+  width: 100vw;
+  height: 10vh;
+  border-top: 2px var(--foreground-color) solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.nav-menu-link:hover { background-color: var(--tertiary-color); }
+
+.nav-menu .links { border-bottom: 2px solid black; }
+
+header {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+header h1 { font-size: 3rem; }
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  font-size: 1.3rem;
+}
+
+.content-wrapper p { text-align: justify; }
+
+footer {
+  background-color: var(--tertiary-color);
+  padding: 2rem;
+}
+
+footer dl {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0 2rem;
+}
+
+footer dl dt { text-align: right; }
